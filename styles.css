@@ -1,0 +1,129 @@
+/* Creating css varaibles to store styles */
+:root {
+    --color-text: #5F5449;
+    --color-accent-3: #9B8269;
+    --color-accent-2: #AFA193;
+    --color-background: #DDD4CC;
+    --color-accent-1: #FCF3EA;
+    --font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root[data-theme=dark] {
+    --color-background: #0D060F;
+    --color-accent-1: #230000;
+    --color-accent-2: #5D3C18;
+    --color-text: #766B65;
+    --color-accent-3: #1E2824;
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.theme-switch {
+    border-radius: 20px;
+    
+    padding: 3px;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-text);
+}
+
+body {
+    background-color: var(--color-background);
+    columns: var(--color-text);
+    margin: 0;
+    padding: 0;
+    display: f;
+}
+
+header {
+    background-color: var(--color-accent-3);
+    font-family: var(--font-family);
+    text-align: center;
+    height: 3rem;
+    min-width: 100%;
+}
+nav {
+    background-color: var(--color-accent-3);
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+nav > a {
+    text-decoration: none;
+    color: var(--color-background);
+    cursor: pointer;
+    width: 8rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 0 0 0;
+    background-color: var(--color-text);
+}
+article {
+    border: 2px solid var(--color-accent-3);
+    background-color: var(--color-accent-2);
+    color: var(--color-text);
+    width: 47.5rem;
+    overflow: hidden;
+   
+    padding: 22rem 1rem 1rem 1rem;
+    margin: 2rem 2rem 3rem 2rem;
+
+    line-height: 1.25rem;
+   
+    display: grid;
+    grid-template-areas: "i i" "a  b" "d d";
+    position: relative;
+    text-align: center;
+}
+article > section {
+    padding: 1rem;
+}
+article > h1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+article > .i {
+    grid-area: i;
+}
+article > .a {
+    grid-area: a;
+    text-align: left;
+}
+article > .b {
+    grid-area: b;
+    text-align: left;
+}
+article > .d {
+    grid-area: d;
+}
+section {
+    background-color: var(--color-accent-1);
+}
+mark {
+    background-color: var(--color-background);
+}
+footer {
+    background-color: var(--color-accent-3);
+    text-align: center;
+    color: var(--color-text);
+    height: 3rem;
+    padding-top: 1rem;
+}
+img {
+    height: 12rem;
+    padding: 1rem;
+}
+.hero-img {
+    height: 14rem;
+    width: 14rem;
+    border-radius: 100%;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%,0%);
+    border: 2px inset black;
+    object-fit: cover;
+}
